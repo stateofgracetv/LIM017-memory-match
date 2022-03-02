@@ -9,7 +9,7 @@
     <header class="navbar">
       <img class="logo" src="img/logoProyecto2.png" alt="Logo de PokeMatch" title="PokeMatch">
       <nav>
-        <ul>
+        <ul class="navList">
           <li><a href="#">¿Cómo jugar?</a></li>
           <li><a href="#">Sobre PokeMatch</a></li>
         </ul>
@@ -17,7 +17,7 @@
     </header>
     <section id="homepage">
       <div id="nicknameBox">
-        <img src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
+        <img class="squirtle" src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
         <form action="">
           <label for="nickname">Alias:</label>
           <input type="text" name="nickname" id="user" placeholder="Pikachulover123" required />
@@ -32,12 +32,23 @@
       </div>
     </div>
     <section id="game">
-      <div id="bar">
+      <div class="bar">
         <p id="player"></p>
         <p id="time">Tiempo: 0:00</p>
       </div>
       <div>
         <p>Aquí irán las cartas</p>
+      </div>
+    </section>
+    <section id="gameOver">
+      <div class="bar">
+        <p id="player"></p>
+        <p id="time">Tiempo: 0:00</p>
+      </div>
+      <div>
+        <p id="finalPoints"></p>
+        <img class="squirtle" src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
+        <button>JUGAR OTRA VEZ</button>
       </div>
     </section>
     <div id="root"></div>
