@@ -1,0 +1,13 @@
+* {
+    background-image: url(img/imagenFondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.logo {
+    position: absolute;
+    width: 337px;
+    height: 84px;
+    left: 27px;
+    top: 22px;
+}
