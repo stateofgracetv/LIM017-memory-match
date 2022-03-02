@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="img/logoProyecto2.png" alt="Logo de PokeMatch">
+      <img class="logo" src="img/logoProyecto2.png" alt="Logo de PokeMatch" title="PokeMatch">
       <nav>
         <ul>
           <li><a href="#">¿Cómo jugar?</a></li>
@@ -15,8 +15,32 @@
         </ul>
     </nav>
     </header>
+    <section id="homepage">
+      <div id="nicknameBox">
+        <img src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
+        <form action="">
+          <label for="nickname">Alias:</label>
+          <input type="text" name="nickname" id="user" placeholder="Pikachulover123" required />
+          <button type="submit">JUGAR</button>
+        </form>
+      </div>
+    </section>
+    <div class="popup">
+      <div id="howToPlay">
+        <h1>¿Cómo jugar?</h1>
+        <p>Las cartas estarán boca abajo en un orden aleatorio, deberás develarlas de dos en dos, buscando un PokeMatch. <br> ¡Usa tu memoria para recordar la posición de las cartas y ganar!</p>
+      </div>
+    </div>
+    <section id="game">
+      <div id="bar">
+        <p id="player"></p>
+        <p id="time">Tiempo: 0:00</p>
+      </div>
+      <div>
+        <p>Aquí irán las cartas</p>
+      </div>
+    </section>
     <div id="root"></div>
-    <img src="img/squirtle-pixel.png" alt="">
     <script src="main.js" type="module"></script>
   </body>
 </html>
