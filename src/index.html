@@ -2,55 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="navbar">
-      <img class="logo" src="img/logoProyecto2.png" alt="Logo de PokeMatch" title="PokeMatch">
-      <nav>
-        <ul class="navList">
-          <li><a href="#">¿Cómo jugar?</a></li>
-          <li><a href="#">Sobre PokeMatch</a></li>
-        </ul>
-    </nav>
+    <header>
+      <section class="barraTop">
+        <div class="logo">
+          <img src="img/logoProyecto2.png" alt="logo-pokematch" height="35px">
+
+        </div>
+
+      </section>
     </header>
-    <section id="homepage">
-      <div id="nicknameBox">
-        <img class="squirtle" src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
-        <form action="">
-          <label for="nickname">Alias:</label>
-          <input type="text" name="nickname" id="user" placeholder="Pikachulover123" required />
-          <button type="submit">JUGAR</button>
-        </form>
-      </div>
-    </section>
-    <div class="popup">
-      <div id="howToPlay">
-        <h1>¿Cómo jugar?</h1>
-        <p>Las cartas estarán boca abajo en un orden aleatorio, deberás develarlas de dos en dos, buscando un PokeMatch. <br> ¡Usa tu memoria para recordar la posición de las cartas y ganar!</p>
-      </div>
-    </div>
-    <section id="game">
-      <div class="bar">
-        <p id="player"></p>
-        <p id="time">Tiempo: 0:00</p>
-      </div>
-      <div>
-        <p>Aquí irán las cartas</p>
-      </div>
-    </section>
-    <section id="gameOver">
-      <div>
-        <p id="finalPoints"></p>
-        <img class="squirtle" src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
-        <button>JUGAR OTRA VEZ</button>
-      </div>
-    </section>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-    <footer>
-      <p>Este es el footer</p>
-    </footer>
+    
+   
   </body>
 </html>
