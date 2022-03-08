@@ -1,34 +1,96 @@
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{
+    font-family: 'VT323', monospace;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
-body{
-    background-image: url(img/fondoCelular.png);
+#desktop{
+    display: none;
+}
+
+#mobile{
+    display: block;
+    
+}
+
+
+.background-image{
+    background-image: url(img/imagenFondo.jpg);
     background-repeat: no-repeat;
-    background-size: 120% auto;
+    
 }
 
 header{
-    width: 100%;
-    height: 140px;
+    
+    height: 493px;
     display: grid;
     grid-template-rows: 1fr 1fr;
 
 }
 
-.barraTop{
-    width: 100%;
-    height: 58%;
+.section-top{
+    
+    height: 17%;
     display: grid;
     background-color: #46CBE9;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    margin-left: 36px;
     
 }
+
+.logotype{
+    display: flex;
+    align-items: center;
+    margin-left: 9px;
+    
+}
+
+.user{
+    width: 28px;
+    padding-top: 4px;
+    margin: auto;
+    padding-bottom: 31px;
+    padding-right: 178px;
+    position: relative;
+    top: -366px;
+    background-color: hsla(189, 100%, 81%, 0.44);
+}
+
+.logotype-squirtle{
+    margin-left: 46px;
+    margin-top: 12px;
+}
+
+.input-user{
+    display: grid;
+    justify-items: center;
+}
+
+.label-user{
+    margin-bottom: 17px;
+    position: absolute;
+    left: 17px;
+    top: 148px;
+    font-size: 20px;
+}
+
+.name-user{
+    background-color: white;
+    padding-bottom: 17px;
+    margin-left: 68px;
+    border: white solid 1px;
+}
+
+.button-playing{
+    background-color: #9FF0FF;
+    display: grid;
+    justify-items: center;
+    margin-top: 27px;
+    margin-left: 59px;
+    padding: 8px 30px 8px 28px;
+    border: #9FF0FF solid 1px;
+    font-size: 20px;
+}
+
+
+
 
 }
