@@ -31,23 +31,22 @@ function fetchData() {
     }
     return response.json();
   })
-  .then(console.log(response.json()))
   .then(pokemon => {
     const cards = pokemon.items
       .map(cards => {
         return `
-        <div class='card'>
-          <img src="${items.image}" alt="${cards.id}">
-        </div>
+        <p class="card"><img src="${cards.image}" alt="${cards.id}" /></p>
         `;
       })
       .join('');
-    document.querySelector('#allCards').insertAdjacentHTML("afterbegin", cards);
+    document.querySelector("#allCards").insertAdjacentHTML("afterbegin", cards);
   })
   .catch(error => {
     console.log(error);
   })
 }
+
+fetchData();
 /* 	.then(function(data) {
 		console.log(data);
     allCards = data.items;
