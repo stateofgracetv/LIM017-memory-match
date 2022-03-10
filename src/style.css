@@ -22,8 +22,6 @@
     cursor: pointer;
 }
 
-
-
 /* @media (min-width: 320px) and (max-width: 480px) { */
 /* #desktop {
     display: none;
@@ -42,7 +40,7 @@ body {
     margin: 0;
 }
 
-.navbar {
+#navbar {
     background-color: #46CBE9;
     height: 56px;
 }
@@ -101,7 +99,42 @@ body {
     border: #9FF0FF solid 1px;
     font-size: 40px;
 }
+button:hover {
+    box-shadow: 5px 10px 8px #808080;
+}
 
+#game-bar {
+    display: none;
+    background-color: #EFEFEF;
+    height: 53px;
+}
+
+#menu {
+    display: none;
+    align-content: baseline;
+    margin-top: 190px;
+}
+
+#stacked-cards {
+    height: 157px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 58px;
+}
+
+#menu-buttons {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: fit-content;
+}
+.menu-button {
+    background-color: #9FF0FF;
+    border: #9FF0FF solid 1px;
+    font-size: 30px;
+    width: max-content;
+    height: 40px;
+}
 
 
 

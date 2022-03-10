@@ -19,7 +19,8 @@ function fetchData() {
     const cards = pokemon.items
       .map(cards => {
         return `
-        <p class="card cartaSello"  style="background-color:${cards.bgColor}"><img src="${cards.image}" alt="${cards.id}" /></p>
+        <p class="card" id="${cards.id}-1" style="background-color:${cards.bgColor}"><img src="${cards.image}" alt="${cards.id}" /></p>
+        <p class="card" id="${cards.id}-2" style="background-color:${cards.bgColor}"><img src="${cards.image}" alt="${cards.id}" /></p>
         `;
       })
       .join('');
