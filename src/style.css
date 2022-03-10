@@ -3,6 +3,37 @@
     font-family: 'VT323', monospace;
 }
 
+.cara{
+    position: absolute;
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.sello{
+    position: absolute;
+    transform: rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 320px) and (max-width: 480px) {
 #desktop{
     display: none;
