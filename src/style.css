@@ -1,96 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 *{
     font-family: 'VT323', monospace;
+    box-sizing: border-box;
+    display: grid;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-#desktop{
+/* @media (min-width: 320px) and (max-width: 480px) { */
+/* #desktop {
     display: none;
 }
 
-#mobile{
+#mobile {
     display: block;
     
+} */
+
+title {
+    display: none;
 }
 
+body {
+    margin: 0;
+}
 
-.background-image{
+.navbar {
+    background-color: #46CBE9;
+    height: 56px;
+}
+.logo {
+    height: 34px;
+    margin-top: 11px;
+    margin-left: 9px;
+}
+
+.background-image {
     background-image: url(img/imagenFondo.jpg);
     background-repeat: no-repeat;
-    
+    background-size: cover;
+    height: 747px;
 }
 
-header{
-    
-    height: 493px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-
-}
-
-.section-top{
-    
-    height: 17%;
-    display: grid;
-    background-color: #46CBE9;
-    
-}
-
-.logotype{
+#user-log {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 381px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 154px;
     align-items: center;
-    margin-left: 9px;
-    
-}
-
-.user{
-    width: 28px;
-    padding-top: 4px;
-    margin: auto;
-    padding-bottom: 31px;
-    padding-right: 178px;
-    position: relative;
-    top: -366px;
     background-color: hsla(189, 100%, 81%, 0.44);
 }
 
-.logotype-squirtle{
-    margin-left: 46px;
-    margin-top: 12px;
+#squirtle {
+    height: 160px;
 }
 
-.input-user{
-    display: grid;
-    justify-items: center;
+#user-input {
+    grid-auto-flow: column;
+    margin-top: 34px;
+    margin-bottom: 34px;
 }
 
-.label-user{
-    margin-bottom: 17px;
-    position: absolute;
-    left: 17px;
-    top: 148px;
-    font-size: 20px;
+#nickname-label {
+    font-size: 40px;
+    margin-right: 14px;
+    margin-left: 22px
 }
 
-.name-user{
+#username {
     background-color: white;
-    padding-bottom: 17px;
-    margin-left: 68px;
     border: white solid 1px;
+    font-size: 22px;
+    width: 82%;
 }
 
-.button-playing{
+#play-button {
     background-color: #9FF0FF;
-    display: grid;
-    justify-items: center;
-    margin-top: 27px;
-    margin-left: 59px;
     padding: 8px 30px 8px 28px;
     border: #9FF0FF solid 1px;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 
 
 
-}
+/* } */
