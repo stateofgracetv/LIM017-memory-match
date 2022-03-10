@@ -101,7 +101,39 @@ body {
     border: #9FF0FF solid 1px;
     font-size: 40px;
 }
+button:hover {
+    box-shadow: 5px 10px 8px #808080;
+}
 
+.game-bar {
+    background-color: #EFEFEF;
+    height: 53px;
+}
+
+#stacked-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 157px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    align-items: center;
+}
+
+#menu-buttons {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: fit-content;
+}
+.menu-button {
+    background-color: #9FF0FF;
+    border: #9FF0FF solid 1px;
+    font-size: 30px;
+    width: max-content;
+    height: 40px;
+}
 
 
 
