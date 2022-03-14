@@ -4,23 +4,31 @@
     box-sizing: border-box;
     display: grid;
 }
-.cara{
+.face{
     position: absolute;
-    transform: rotateY(-180deg);
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transition: all .4s ease-in-out;
     cursor: pointer;
 }
 
-.sello{
+.back{
     position: absolute;
-    transform: rotateX(0deg) rotateY(0deg);
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transition: all .4s ease-in-out;
     cursor: pointer;
 }
+
+.show{
+    transform: rotateX(0deg) rotateY(0deg);  
+} 
+
+.hide{
+    transform: rotateY(-180deg);
+}
+
+/*muestra y oculta
 
 /* @media (min-width: 320px) and (max-width: 480px) { */
 /* #desktop {
