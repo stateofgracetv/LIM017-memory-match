@@ -28,3 +28,9 @@ closePopUpButton.addEventListener('click', () => {
   popUp.classList.remove('active');
   overlay.classList.remove('active');
 })
+
+const goToGame = document.getElementById('repartir');
+goToGame.addEventListener('click', () => {
+  document.getElementById('menu').style.display = 'none';
+  document.getElementById('game').style.display = 'grid';
+});

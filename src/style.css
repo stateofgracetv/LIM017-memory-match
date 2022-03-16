@@ -144,7 +144,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 200ms ease-in-out;
-    border: 3px #000;
     background-color: #E5E5E5;
     z-index: 10;
     width: 75%;
@@ -192,4 +191,11 @@ body {
     pointer-events: all;
 }
 
+#allCards {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#game {
+    display: none;
+}
 /* } */

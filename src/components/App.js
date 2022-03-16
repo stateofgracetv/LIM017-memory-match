@@ -27,7 +27,6 @@ function fetchData() {
     .then(pokemon => {
       const copyCards = [...pokemon.items,...pokemon.items];
       const cards = shuffledArray(copyCards);
-      console.log(cards)
       const allCards = cards.map((card, index) => {
         return `
         <div class="card" style="height:100px">
