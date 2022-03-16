@@ -6,6 +6,16 @@ const App = () => {
   return el;
 };
 
+const shuffledArray = array => {
+  for (let i = array.length -1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+
 function fetchData() {
   fetch('./data/pokemon/pokemon.json')
     .then(response => {
@@ -15,18 +25,20 @@ function fetchData() {
       return response.json();
     })
     .then(pokemon => {
-      const cards = pokemon.items
-        .map(cards => {
-          return `
+      const copyCards = [...pokemon.items,...pokemon.items];
+      const cards = shuffledArray(copyCards);
+      console.log(cards)
+      const allCards = cards.map((card, index) => {
+        return `
         <div class="card" style="height:100px">
-        <div class="face hide" id="flip-face_${cards.id}-1" pokemon-back-id="flip-back_${cards.id}-1"><img src="${cards.image}" height="100" alt="${cards.id}" /></div>
-        <div class="back show" id="flip-back_${cards.id}-1" pokemon-face-id="flip-face_${cards.id}-1"><img src="img/card-back.png" height="100" /></div>
+        <div class="face hide" id="flip-face_${card.id}-${index}" pokemon-back-id="flip-back_${card.id}-${index}"><img src="${card.image}" height="100" alt="${card.id}" /></div>
+        <div class="back show" id="flip-back_${card.id}-${index}" pokemon-face-id="flip-face_${card.id}-${index}"><img src="img/card-back.png" height="100" /></div>
         </div>
         <br>
         `;
-        })   //HE CREADO 2 ID PARA TENER UN ID QUE MOSTRAR CARTA Y OTRO QUE OCULTAR
-        .join('');
-      document.querySelector("#allCards").insertAdjacentHTML("afterbegin", cards);
+      })   //HE CREADO 2 ID PARA TENER UN ID QUE MOSTRAR CARTA Y OTRO QUE OCULTAR
+      .join('');
+      document.querySelector("#allCards").insertAdjacentHTML("afterbegin", allCards);
      
      
       function flip_back_face() { //GIRAR SELLO CARA
@@ -54,16 +66,16 @@ function fetchData() {
       }
 
      // AL DAR CLICK LLAMO CON CLASE
-      var backClass = document.getElementsByClassName("back");
+      const backClass = document.getElementsByClassName("back");
       for (let i = 0; i < backClass.length; i++) {
         backClass[i].addEventListener("click", flip_back_face);
       }
 
-      var faceClass = document.getElementsByClassName("face");
+      const faceClass = document.getElementsByClassName("face");
       for (let i = 0; i < faceClass.length; i++) {
         faceClass[i].addEventListener("click", flip_face_back);
       }
-
+      
     })
     .catch(error => {
       console.log(error);
