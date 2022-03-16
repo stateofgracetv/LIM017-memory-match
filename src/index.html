@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header id="navbar">
       <img class="logo" src="img/logoProyecto2.png" alt="Logo de PokeMatch" title="PokeMatch">
     </header>
+
     <header id="game-bar"></header>
+
     <div class="background-image">
       <section id="user-log">
         <div>
@@ -24,23 +27,32 @@
           <button id="play-button">JUGAR</button>
         </div>
       </section>
+
       <section id="menu">
         <div>
           <img id="stacked-cards" src="img/stacked-cards.png" alt="Cartas" />
         </div>
         <div id="menu-buttons">
-          <button class="menu-button" id="comojugar">¿Cómo jugar?</button>
-          <button class="menu-button" id="repartir">Repartir</button>
+          <button class="menu-button" id="openPU">¿CÓMO JUGAR?</button>
+          <button class="menu-button" id="repartir">REPARTIR</button>
         </div>
       </section>
     </div>
     
-    <div class="popup">
-      <div id="howToPlay">
-        <h1>¿Cómo jugar?</h1>
-        <p>Las cartas estarán boca abajo en un orden aleatorio, deberás develarlas de dos en dos, buscando un PokeMatch. <br> ¡Usa tu memoria para recordar la posición de las cartas y ganar!</p>
+    <div id="popUp" class="inactive">
+      <div class="pu-title">
+        ¿Cómo jugar?
+      </div>
+      <div class="pu-body">
+        <div id="pu-text">Las cartas estarán boca abajo en un orden aleatorio, deberás develarlas de dos en dos, buscando un PokeMatch. <br> ¡Usa tu memoria para recordar la posición de las cartas y ganar!</div>
+        <div>
+          <button id="closePU">CERRAR</button>
+        </div>
       </div>
     </div>
+
+    <div id="overlay" class="inactive"></div>
+    
     <section id="game">
       <div class="bar">
         <p id="player"></p>
@@ -49,6 +61,7 @@
       <p>Aquí irán las cartas</p>
       <div id='allCards'></div>
     </section>
+
     <section id="gameOver">
       <div>
         <p id="finalPoints"></p>
@@ -56,35 +69,13 @@
         <button>JUGAR OTRA VEZ</button>
       </div>
     </section>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+
     <footer>
       <p>Este es el footer</p>
     </footer>
- <!--MOBILE-->
-  <div id="mobile" >
-    <header class="background-image">
-      <section class="section-top">
-        <div class="logotype">
-          <img src="img/logoProyecto2.png" alt="PokeMatch" height="30px">
-        </div>
-      </section>
-    </header>
     
-  </div>
-  <section class="user">
-    <div class="logotype-squirtle">
-      <img src="img/squirtle-pixel.png" alt="squirtle" height="120px">
-    </div>
-    <div class="input-user">
-      <label for="" class="label-user">Alias:</label>
-      <input type="text" class="name-user">
-    </div>
-    <div>
-      <button class="button-playing">JUGAR</button>
-    </div>
-  </section>
-  
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
   
   </body>
 </html>

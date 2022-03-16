@@ -4,6 +4,16 @@
     box-sizing: border-box;
     display: grid;
 }
+button {
+    background-color: #9FF0FF;
+    border: #000 solid 1px;
+    padding: 8px 30px;
+    font-size: 40px;
+}
+button:hover {
+    box-shadow: 5px 10px 8px #808080;
+}
+
 .face{
     position: absolute;
     transform-style: preserve-3d;
@@ -101,19 +111,9 @@ body {
     width: 82%;
 }
 
-#play-button {
-    background-color: #9FF0FF;
-    padding: 8px 30px 8px 28px;
-    border: #9FF0FF solid 1px;
-    font-size: 40px;
-}
-button:hover {
-    box-shadow: 5px 10px 8px #808080;
-}
-
 #game-bar {
     display: none;
-    background-color: #EFEFEF;
+    background-color: #E5E5E5;
     height: 53px;
 }
 
@@ -132,18 +132,64 @@ button:hover {
 
 #menu-buttons {
     grid-auto-flow: column;
-    align-items: center;
     justify-content: space-evenly;
-    height: fit-content;
 }
 .menu-button {
-    background-color: #9FF0FF;
-    border: #9FF0FF solid 1px;
     font-size: 30px;
-    width: max-content;
-    height: 40px;
 }
 
+#popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    border: 3px #000;
+    background-color: #E5E5E5;
+    z-index: 10;
+    width: 75%;
+}
+#popUp.inactive {
+    transform: translate(-50%, -50%) scale(0);
+}
+#popUp.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+#popUp .pu-title {
+    padding-top: 15px;
+    justify-content: center;
+    font-size: 40px;
+}
+#popUp .pu-body {
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+}
+#closePU {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 22px;
+    padding: 8px 20px;
+    font-size: 40px;
+}
 
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#overlay.inactive {
+    opacity: 0;
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
 
 /* } */
