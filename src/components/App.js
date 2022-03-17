@@ -28,12 +28,12 @@ function fetchData() {
       const copyCards = [...pokemon.items,...pokemon.items];
       const cards = shuffledArray(copyCards);
       const allCards = cards.map((card, index) => {
+      
         return `
         <div class="card" style="height:100px">
-        <div class="face hide" id="flip-face_${card.id}-${index}" pokemon-back-id="flip-back_${card.id}-${index}"><img src="${card.image}" height="100" alt="${card.id}" /></div>
-        <div class="back show" id="flip-back_${card.id}-${index}" pokemon-face-id="flip-face_${card.id}-${index}"><img src="img/card-back.png" height="100" /></div>
+        <div class="face hide" id="flip-face_${card.id}-${index}" pokemon-back-id="flip-back_${card.id}-${index}" style="border: ${card.bgColor} solid 3px;background-color: white"><img src="${card.image}"  alt="${card.id}" class="image-card"/></div>
+        <div class="back show" id="flip-back_${card.id}-${index}" pokemon-face-id="flip-face_${card.id}-${index}" ><img src="img/card-back.png" class="image-card" /></div>
         </div>
-        <br>
         `;
       })   //HE CREADO 2 ID PARA TENER UN ID QUE MOSTRAR CARTA Y OTRO QUE OCULTAR
       .join('');
