@@ -10,6 +10,15 @@ goToMenu.addEventListener('click', () => {
   document.getElementById('menu').style.display = 'grid';
 });
 
+const username = document.getElementById('username');
+const greeting = document.getElementById('greeting');
+const player = document.getElementById('player');
+username.addEventListener('keyup', () => {
+  console.log(username.value);
+  greeting.innerText = `Hola, ${username.value}`;
+  player.innerText = `Player: ${username.value}`;
+})
+
 const openPopUpButton = document.getElementById('openPU');
 const closePopUpButton = document.getElementById('closePU');
 const overlay = document.getElementById('overlay');
