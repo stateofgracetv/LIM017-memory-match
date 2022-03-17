@@ -198,4 +198,54 @@ body {
 #game {
     display: none;
 }
+
+/*medida para movil para las cartas*/
+@media (min-width: 320px) and (max-width: 480px){
+.card-container{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.card{
+  padding: 10px;
+  width: 121px;
+  margin-top: 17px;
+  
+    
+}
+
+.image-card{
+    height: 100px;
+}
+
+}
+/*medida para  desptok para las cartas*/
+
+@media (min-width: 1281px){
+
+    .card-container{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .card{
+      padding: 19px;
+      width: 193px;
+      margin-top: 7px;
+      line-height: 150px;
+      margin-bottom: 76px;
+        
+    }
+    
+    .image-card{
+        height: 150px;
+    }
+}
+
 /* } */

@@ -43,3 +43,4 @@ goToGame.addEventListener('click', () => {
   document.getElementById('menu').style.display = 'none';
   document.getElementById('game').style.display = 'grid';
 });
+
