@@ -2,6 +2,7 @@ import App from './components/App.js';
 
 document.getElementById('root').appendChild(App());
 
+//Transición de botón
 const goToMenu = document.getElementById('play-button');
 goToMenu.addEventListener('click', () => {
   document.getElementById('user-log').style.display = 'none';
@@ -10,15 +11,15 @@ goToMenu.addEventListener('click', () => {
   document.getElementById('menu').style.display = 'grid';
 });
 
+//Traer input de user nickname y mostrarlo
 const username = document.getElementById('username');
-const greeting = document.getElementById('greeting');
 const player = document.getElementById('player');
 username.addEventListener('keyup', () => {
   console.log(username.value);
-  greeting.innerText = `Hola, ${username.value}`;
-  player.innerText = `Player: ${username.value}`;
+  player.innerText = `Hola, ${username.value}`;
 })
 
+//Funciones de la ventana modal/pop up
 const openPopUpButton = document.getElementById('openPU');
 const closePopUpButton = document.getElementById('closePU');
 const overlay = document.getElementById('overlay');
@@ -38,9 +39,15 @@ closePopUpButton.addEventListener('click', () => {
   overlay.classList.remove('active');
 })
 
+//Transición de botón
 const goToGame = document.getElementById('repartir');
 goToGame.addEventListener('click', () => {
   document.getElementById('menu').style.display = 'none';
   document.getElementById('game').style.display = 'grid';
+  if (username.value == '') {
+    player.innerHTML = `Player: desconocidx`;
+  } else {
+    player.innerText = `Player: ${username.value}`;
+  }
+  document.getElementById('moves').style.display = 'grid';
 });
-
