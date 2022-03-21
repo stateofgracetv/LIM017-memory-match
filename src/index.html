@@ -12,12 +12,15 @@
       <img class="logo" src="img/logoProyecto2.png" alt="Logo de PokeMatch" title="PokeMatch">
     </header>
 
-    <header id="game-bar"></header>
+    <header id="game-bar">
+      <p id="player">Hola, desconocidx</p>
+      <p id="moves">Movimientos: </p>
+    </header>
 
     <div class="background-image">
       <section id="user-log">
         <div>
-          <img src="img/squirtle-pixel.png" id="squirtle" alt="Imagen de Squirtle" title="Squirtle">
+          <img src="img/squirtle-pixel.png" class="squirtle" alt="Imagen de Squirtle" title="Squirtle">
         </div>
         <div id="user-input">
           <label for="nickname" id="nickname-label">Alias:</label>
@@ -42,11 +45,15 @@
         <div id='allCards' class="card-container"></div>
       </section>
 
-      <section id="gameOver">
+      <section id="game-over">
         <div>
-          <p id="finalPoints"></p>
+          <p id="finalMessage">¡Felicidades desconocidx, has ganado este PokeMatch!</p>
+        </div>
+        <div>
           <img class="squirtle" src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
-          <button>JUGAR OTRA VEZ</button>
+        </div>
+        <div>
+          <button id="playAgain">JUGAR OTRA VEZ</button>
         </div>
       </section>
     </div>
