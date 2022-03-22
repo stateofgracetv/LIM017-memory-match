@@ -1,11 +1,3 @@
-/* const App = () => {
-  const el = document.createElement('div');
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
-
-  return el;
-}; */
-
 const shuffledArray = array => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -25,16 +17,13 @@ function fetchData() {
     return response.json();
   })
   .then(pokemon => {
-    console.log(pokemon);
     const copyCards = [...pokemon.items, ...pokemon.items];
     const cards = shuffledArray(copyCards);
     const allCards = cards.map((card, index) => {
-      return `
-      <div class="card" style="height:100px">
+      return `<div class="card" style="height:100px">
         <div class="face hide" id="face_${card.id}-${index}" pokemon-back-id="back_${card.id}-${index}" style="border: ${card.bgColor} solid 3px;background-color: white"><img src="${card.image}"  alt="${card.id}" class="image-card"/></div>
         <div class="back show" id="back_${card.id}-${index}" pokemon-face-id="face_${card.id}-${index}" name="${card.id}" ><img src="img/card-back.png" class="image-card" /></div>
-      </div>
-      `;
+      </div>`;
     })
     .join('');
     document.querySelector("#allCards").insertAdjacentHTML("afterbegin", allCards);
@@ -76,9 +65,8 @@ function fetchData() {
           document.getElementById('moves').innerText = `Movimientos: ${moves}`;
         }
       }
+
     }
-    
-    
     
     function win() {
       document.getElementById('game').style.display = 'none';
@@ -109,8 +97,4 @@ function flip_back(idFace, idBack) {
   document.getElementById(idFace).classList.remove("show");
 }
 
-
-
-
-fetchData();
 export default fetchData;

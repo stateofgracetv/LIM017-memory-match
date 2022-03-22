@@ -1,4 +1,3 @@
-//import App from './App.js';
 import fetchData from './App.js';
 
 describe('fetchData', () => {
@@ -16,3 +15,7 @@ describe('fetchData.play', () => {
     expect(typeof fetchData.play).toBe('function');
   }
 })
+
+it('should throw Error when invoked with wrong argument types', () => {
+  expect(() => fetchData()).toThrow(Error);
+});
