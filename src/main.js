@@ -1,6 +1,6 @@
 import fetchData from './components/App.js';
-
 document.getElementById('root').appendChild(fetchData());
+
 
 //Transición de botón
 const goToMenu = document.getElementById('play-button');
