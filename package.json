@@ -1,6 +1,7 @@
 {
   "name": "memory-match",
   "version": "1.0.0",
+  "type": "module",
   "description": "Memory Match Game",
   "main": "src/index.html",
   "license": "MIT",
@@ -15,8 +16,10 @@
     "@babel/plugin-transform-modules-commonjs": "^7.14.0",
     "babel-jest": "^27.0.1",
     "eslint": "^8.3.0",
+    "fetch-mock-jest": "^1.5.1",
     "gh-pages": "^3.2.0",
     "jest": "^27.0.1",
+    "jest-fetch-mock": "^3.0.3",
     "serve": "^13.0.2"
   },
   "engines": {
@@ -24,6 +27,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.3"
   }
 }
-

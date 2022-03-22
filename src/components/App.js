@@ -1,15 +1,7 @@
-const shuffledArray = array => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-  return array;
-}
+import shuffledArray from './ShuffledArray.js';
 
-function fetchData() {
-  const result = fetch('./data/pokemon/pokemon.json')
+function fetchData(data_pokemon) {
+  const result = fetch(data_pokemon)
   .then(response => {
     if (response.ok === false) {
       throw Error('Ha ocurrido un error');
@@ -79,10 +71,8 @@ function fetchData() {
     }
 
   })
-
-  const resultHTML = document.createElement("div");
-  resultHTML.innerHTML = result;
-  return resultHTML;
+  
+  return result;
 }
 
 function flip_face(idFace, idBack) {

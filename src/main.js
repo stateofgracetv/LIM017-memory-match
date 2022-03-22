@@ -1,6 +1,7 @@
 import fetchData from './components/App.js';
 
-document.getElementById('root').appendChild(fetchData());
+//document.getElementById('root').appendChild(fetchData());
+fetchData("../data/pokemon/pokemon.json");
 
 //Transición de botón
 const goToMenu = document.getElementById('play-button');
