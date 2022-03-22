@@ -9,7 +9,7 @@ const shuffledArray = array => {
 }
 
 function fetchData() {
-  fetch('./data/pokemon/pokemon.json')
+  const result = fetch('./data/pokemon/pokemon.json')
   .then(response => {
     if (response.ok === false) {
       throw Error('Ha ocurrido un error');
@@ -20,14 +20,15 @@ function fetchData() {
     const copyCards = [...pokemon.items, ...pokemon.items];
     const cards = shuffledArray(copyCards);
     const allCards = cards.map((card, index) => {
-      return `<div class="card" style="height:100px">
+      return `
+      <div class="card" style="height:100px">
         <div class="face hide" id="face_${card.id}-${index}" pokemon-back-id="back_${card.id}-${index}" style="border: ${card.bgColor} solid 3px;background-color: white"><img src="${card.image}"  alt="${card.id}" class="image-card"/></div>
         <div class="back show" id="back_${card.id}-${index}" pokemon-face-id="face_${card.id}-${index}" name="${card.id}" ><img src="img/card-back.png" class="image-card" /></div>
-      </div>`;
+      </div>
+      `;
     })
     .join('');
     document.querySelector("#allCards").insertAdjacentHTML("afterbegin", allCards);
-
     
     let turn = 0, pokemon1, pokemon2, moves = 0, matches = 0, faceA, backA, faceB, backB;
     function play() {
@@ -65,9 +66,8 @@ function fetchData() {
           document.getElementById('moves').innerText = `Movimientos: ${moves}`;
         }
       }
-
     }
-    
+
     function win() {
       document.getElementById('game').style.display = 'none';
       document.getElementById('game-over').style.display = 'flex';
@@ -79,6 +79,10 @@ function fetchData() {
     }
 
   })
+
+  const resultHTML = document.createElement("div");
+  resultHTML.innerHTML = result;
+  return resultHTML;
 }
 
 function flip_face(idFace, idBack) {
