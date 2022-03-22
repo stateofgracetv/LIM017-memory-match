@@ -72,7 +72,8 @@ body {
     background-image: url(img/imagenFondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 747px;
+    background-position: center;
+    height: fit-content;
 }
 
 #user-log {
@@ -279,7 +280,11 @@ body {
     margin-top: 20px;
 }
 
-.App {
-    display: none;
+footer {
+    text-align: center;
 }
+
+/* .App {
+    display: none;
+} */
 /* } */

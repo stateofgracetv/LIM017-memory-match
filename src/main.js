@@ -1,6 +1,6 @@
-import App from './components/App.js';
+/* import App from './components/App.js'; */
 
-document.getElementById('root').appendChild(App());
+/* document.getElementById('root').appendChild(App()); */
 
 //Transición de botón
 const goToMenu = document.getElementById('play-button');
@@ -15,7 +15,6 @@ goToMenu.addEventListener('click', () => {
 const username = document.getElementById('username');
 const player = document.getElementById('player');
 username.addEventListener('keyup', () => {
-  console.log(username.value);
   player.innerText = `Hola, ${username.value}`;
 })
 
