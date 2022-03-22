@@ -1,10 +1,10 @@
-const App = () => {
-  const el = document.createElement('div');
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+// const App = () => {
+//   const el = document.createElement('div');
+//   el.className = 'App';
+//   el.textContent = 'Hola mundo!';
 
-  return el;
-};
+//   return el;
+// };
 
 const shuffledArray = array => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -16,8 +16,8 @@ const shuffledArray = array => {
   return array;
 }
 
-function fetchData() {
-  fetch('./data/pokemon/pokemon.json')
+const fetchData = () => {
+  const result = fetch('./data/pokemon/pokemon.json')
     .then(response => {
       if (response.ok === false) {
         throw Error('Ha ocurrido un error');
@@ -91,12 +91,16 @@ function fetchData() {
       for (let i = 0; i < backClass.length; i++) {
         backClass[i].addEventListener("click", play);
       }
-
+      
     })
     .catch(error => {
-      console.log(error);
+      throw Error(error);
     })
+
+    const resultHTML = document.createElement("div");
+    resultHTML.innerHTML = result;
+    return resultHTML;
 }
 
-fetchData();
-export default App;
+//fetchData();
+export default fetchData;
