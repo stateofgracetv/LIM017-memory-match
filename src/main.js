@@ -6,7 +6,7 @@ function buildCards() {
   let HTML_Cards = "";
   resultCards.forEach((value) => {
     HTML_Cards +=
-      '<div class="card" style="height:100px">' +
+      '<div class="card">' +
       '<div class="face hide" id="face_' + value.card_id + "-" + value.card_index + '" pokemon-back-id="back_' + value.card_id + "-" + value.card_index + '" style="border: ' + value.card_bgColor + ' solid 3px;background-color: white"><img src="' + value.card_image + '"  alt="'+ value.card_id +'" class="image-card"/></div>' +
       '<div class="back show" id="back_' + value.card_id + "-" + value.card_index + '" pokemon-face-id="face_' + value.card_id + "-" + value.card_index + '" name="'+ value.card_id +'" ><img src="img/card-back.png" class="image-card" /></div>' +
       "</div>";
@@ -66,6 +66,7 @@ goToGame.addEventListener("click", () => {
     player.innerHTML = `Player: desconocidx`;
   } else {
     player.innerText = `Player: ${username.value}`;
+    document.getElementById("finalMessage") = `¡Felicidades ${player}, has ganado este PokeMatch!`;
   }
   document.getElementById("moves").style.display = "grid";
 });
