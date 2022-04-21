@@ -62,13 +62,14 @@ const goToGame = document.getElementById("repartir");
 goToGame.addEventListener("click", () => {
   document.getElementById("menu").style.display = "none";
   document.getElementById("game").style.display = "grid";
+  document.getElementById("moves").style.display = "grid";
+  const player = document.getElementById("player");
   if (username.value == "") {
     player.innerHTML = `Player: desconocidx`;
   } else {
     player.innerText = `Player: ${username.value}`;
-    document.getElementById("finalMessage") = `¡Felicidades ${player}, has ganado este PokeMatch!`;
+    document.getElementById("finalMessage").innerText = `¡Felicidades ${player}, has ganado este PokeMatch!`;
   }
-  document.getElementById("moves").style.display = "grid";
 });
 
 function flip_face(idFace, idBack) {
