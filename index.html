@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header id="navbar">
+      <img class="logo" src="img/logoProyecto2.png" alt="Logo de PokeMatch" title="PokeMatch">
+    </header>
+
+    <header id="game-bar">
+      <p id="player">Hola, desconocidx</p>
+      <p id="moves">Movimientos: </p>
+    </header>
+
+    <div class="background-image">
+      <section id="user-log">
+        <div>
+          <img src="img/squirtle-pixel.png" class="squirtle" alt="Imagen de Squirtle" title="Squirtle">
+        </div>
+        <div id="user-input">
+          <label for="nickname" id="nickname-label">Alias:</label>
+          <input type="text" name="nickname" id="username" placeholder="Pikachulover123" />
+        </div>
+        <div>
+          <button id="play-button">JUGAR</button>
+        </div>
+      </section>
+
+      <section id="menu">
+        <div>
+          <img id="stacked-cards" src="img/stacked-cards.png" alt="Cartas" />
+        </div>
+        <div id="menu-buttons">
+          <button class="menu-button" id="openPU">¿CÓMO JUGAR?</button>
+          <button class="menu-button" id="repartir">REPARTIR</button>
+        </div>
+      </section>
+
+      <section id="game">
+        <div id='allCards' class="card-container"></div>
+      </section>
+
+      <section id="game-over">
+        <div>
+          <p id="finalMessage">¡Felicidades desconocidx, has ganado este PokeMatch!</p>
+        </div>
+        <div>
+          <img class="squirtle" src="img/squirtle-pixel.png" alt="Imagen de Squirtle" title="Squirtle">
+        </div>
+      </section>
+    </div>
+    
+    <div id="popUp" class="inactive">
+      <div class="pu-title">
+        ¿Cómo jugar?
+      </div>
+      <div class="pu-body">
+        <div id="pu-text">Las cartas estarán boca abajo en un orden aleatorio, deberás develarlas de dos en dos, buscando un PokeMatch. <br> ¡Usa tu memoria para recordar la posición de las cartas y ganar!</div>
+        <div>
+          <button id="closePU">CERRAR</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay" class="inactive"></div>
+    
+    
+    <script src="main.js" type="module"></script>
+
+  </body>
+</html>

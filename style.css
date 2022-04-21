@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{
+    font-family: 'VT323', monospace;
+    box-sizing: border-box;
+    display: grid;
+}
+button {
+    background-color: #9FF0FF;
+    border: #000 solid 1px;
+    padding: 8px 30px;
+    font-size: 40px;
+}
+button:hover {
+    box-shadow: 5px 10px 8px #808080;
+}
+
+.face{
+    position: absolute;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.back{
+    position: absolute;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.show{
+    transform: rotateX(0deg) rotateY(0deg);  
+} 
+
+.hide{
+    transform: rotateY(-180deg);
+}
+
+title {
+    display: none;
+}
+
+body {
+    margin: 0;
+}
+
+#navbar {
+    background-color: #46CBE9;
+    height: 56px;
+}
+.logo {
+    height: 34px;
+    margin-top: 11px;
+    margin-left: 9px;
+}
+
+.background-image {
+    background-image: url(img/imagenFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 760px;
+}
+
+#user-log {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 381px;
+    margin: 150px auto 50% auto;
+    align-items: center;
+    background-color: hsla(189, 100%, 81%, 0.44);
+}
+
+.squirtle {
+    height: 160px;
+}
+
+#user-input {
+    grid-auto-flow: column;
+    margin-top: 34px;
+    margin-bottom: 34px;
+}
+
+#nickname-label {
+    font-size: 40px;
+    margin-right: 14px;
+    margin-left: 22px
+}
+
+#username {
+    background-color: white;
+    border: white solid 1px;
+    font-size: 22px;
+    width: 82%;
+}
+
+#game-bar {
+    display: none;
+    background-color: #E5E5E5;
+    height: 53px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    font-size: 26px;
+    align-content: center;
+}
+
+#player {
+    margin: 0;
+}
+#moves {
+    display: none;
+    margin: 0;
+}
+
+#menu {
+    display: none;
+    align-content: baseline;
+    margin-top: 190px;
+}
+
+#stacked-cards {
+    height: 157px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 58px;
+}
+
+#menu-buttons {
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+}
+.menu-button {
+    font-size: 30px;
+}
+
+#popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    background-color: #E5E5E5;
+    z-index: 10;
+    width: 75%;
+}
+#popUp.inactive {
+    transform: translate(-50%, -50%) scale(0);
+}
+#popUp.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+#popUp .pu-title {
+    padding-top: 15px;
+    justify-content: center;
+    font-size: 40px;
+}
+#popUp .pu-body {
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+}
+#closePU {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 22px;
+    padding: 8px 20px;
+    font-size: 40px;
+}
+
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#overlay.inactive {
+    opacity: 0;
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#allCards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: min-content;
+}
+
+#game {
+    display: none;
+}
+
+.card{
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+}
+  
+.image-card{
+    height: 100px;
+}
+
+/* modelo responsive para tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+
+    #allCards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .card{
+        width: 140px;
+        height: 140px;
+        margin: 30px;
+    }
+
+    .image-card{
+        height: 140px;
+    }
+
+    .card-container {
+        display: grid;
+    }
+}
+
+/* modelo responsive desktop */
+@media (min-width: 1024px){
+    
+    #allCards {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .card{
+        width: 170px;
+        height: 170px;
+        margin: 30px;
+    }
+
+    .image-card{
+        height: 170px;
+    }
+    
+    .card-container {
+        display: grid;
+    }
+}
+
+#game-over {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+    height: 300px;
+    margin: 150px auto 50% auto;
+    align-items: center;
+    background-color: hsla(189, 100%, 81%, 0.44);
+}
+
+#finalMessage {
+    font-size: 30px;
+    text-align: center;
+    margin: 0px 18px;
+}
